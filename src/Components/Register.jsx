@@ -1,13 +1,13 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">New to Chef Hub?</h1>
+            <div className="">
+                <div className="flex items-center justify-center gap-20 mt-10">
+                    <div className="">
+                        <h1 className="text-5xl  text-white">New to <span className='font-bold text-yellow-500'>Chef Hub</span>?</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
@@ -28,6 +28,10 @@ const Register = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" placeholder="Enter Your Password" className="input input-bordered" />
+                                <label className="label">
+                                    <span className="label-text">Confirm Password</span>
+                                </label>
+                                <input type="password" placeholder="Re-enter Your Password" className="input input-bordered" />
                                 <label className="label">
                                     <Link to='/login' className="label-text-alt link link-hover">Already Have an Account? Please login</Link>
                                 </label>
