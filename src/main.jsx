@@ -11,6 +11,7 @@ import Blog from './Components/Blog';
 import Register from './Components/Register';
 import Login from './Components/Login';
 import Home from './Components/Home';
+import ChefDetails from './Components/ChefDetails';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        // loader: fetch("/public/chef_data.json")
+        loader: () => fetch("http://localhost:5000/chefs")
       },
       {
         path: "/blog",
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>
       },
+      {
+        path : "/chef/:chefID",
+        element: <ChefDetails></ChefDetails>,
+        loader: () => fetch("http://localhost:5000/chefs")
+      }
     ],
   },
 ]);
