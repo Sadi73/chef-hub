@@ -10,6 +10,7 @@ import Main from './Components/Main';
 import Blog from './Components/Blog';
 import Register from './Components/Register';
 import Login from './Components/Login';
+import Home from './Components/Home';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,9 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: "/home",
-        element: <h2>I am home</h2>,
+        path: "/",
+        element: <Home></Home>,
+        // loader: fetch("/public/chef_data.json")
       },
       {
         path: "/blog",

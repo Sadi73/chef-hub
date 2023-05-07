@@ -10,10 +10,10 @@ const NavBar = () => {
                     <p className='text-3xl font-light mb-5'>Find Your <span className='text-yellow-300 font-semibold'>Chef</span> </p>
                 </div>
                 <div>
-                    <Link to='/' className='mr-10 hover:text-yellow-500'>Home</Link>
-                    <Link to='/blog' className='mr-10 hover:text-yellow-500'>Blog</Link>
-                    <Link to='/register' className='mr-10 hover:text-yellow-500'>Register</Link>
-                    <Link to='/login' className=' hover:text-yellow-500'>Login</Link>
+                    <Link to='/' className='mr-10 text-xl hover:text-yellow-500'>Home</Link>
+                    <Link to='/blog' className='mr-10 text-xl  hover:text-yellow-500'>Blog</Link>
+                    <Link to='/register' className='mr-10 text-xl  hover:text-yellow-500'>Register</Link>
+                    <Link to='/login' className=' text-xl  hover:text-yellow-500'>Login</Link>
                 </div>
             </div>
         </div>

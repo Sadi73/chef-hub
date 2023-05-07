@@ -1,0 +1,50 @@
+[
+    {
+      "_id": "6456a196105f73643b245fc0",
+      "name": "Strong Joseph",
+      "picture": "https://images.delightedcooking.com/linecook.jpg",
+      "experience": 5,
+      "number_of_recipes": 9,
+      "likes": 58
+    },
+    {
+      "_id": "6456a1960a18d8356e8c26d2",
+      "name": "Medina Mckinney",
+      "picture": "https://img.freepik.com/free-psd/proud-chef-gesturing-with-hands_1154-362.jpg?w=740&t=st=1683403045~exp=1683403645~hmac=9f0613075ebde4e0f247127ee4edc71c5ddd202c82c399f40c6db3d12b97f034",
+      "experience": 7,
+      "number_of_recipes": 6,
+      "likes": 193
+    },
+    {
+      "_id": "6456a196ff913c8f6ffc02df",
+      "name": "Susanne Lancaster",
+      "picture": "https://images.delightedcooking.com/female-chef.jpg",
+      "experience": 8,
+      "number_of_recipes": 5,
+      "likes": 177
+    },
+    {
+      "_id": "6456a1967b8cba5842525bde",
+      "name": "Levine Robinson",
+      "picture": "https://img.freepik.com/free-photo/young-confident-afro-american-cook-chef-uniform-thumbs-up-blinks-with-eye-holds-ladle-isolated-white-background-with-copy-space_141793-35004.jpg?w=2000",
+      "experience": 5,
+      "number_of_recipes": 10,
+      "likes": 84
+    },
+    {
+      "_id": "6456a196bdc87f502e6974a5",
+      "name": "Laurel Sykes",
+      "picture": "https://www.pngitem.com/pimgs/m/112-1129335_chef-png-transparent-png.png",
+      "experience": 12,
+      "number_of_recipes": 9,
+      "likes": 111
+    },
+    {
+      "_id": "6456a196c965a1a7f5ba3c95",
+      "name": "Sims Vega",
+      "picture": "https://www.nicepng.com/png/detail/809-8097597_chef-transparent-background.png",
+      "experience": 7,
+      "number_of_recipes": 5,
+      "likes": 113
+    }
+  ]
