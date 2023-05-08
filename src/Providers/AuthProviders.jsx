@@ -12,19 +12,24 @@ const auth = getAuth(app);
 
 const AuthProviders = ({children}) => {
     const [user, setUser] = useState(null);
-    // setUser('sadi');
+    const [loading, setLoading] = useState(true);
+
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
     const signIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
     useEffect(()=>{
         const unsubscribe =  onAuthStateChanged(auth, looggedUser =>{
             setUser(looggedUser);
+            setLoading(false);
         })
         return () => {
             unsubscribe();
@@ -32,6 +37,7 @@ const AuthProviders = ({children}) => {
     },[])
     const authInfo = {
         user ,
+        loading,
         createUser ,
         signIn,
         logOut

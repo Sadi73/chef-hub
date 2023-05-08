@@ -7,7 +7,6 @@ const Login = () => {
     const { signIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
     const from = location.state?.from?.pathname ? location.state.from.pathname : '/';
 
 
@@ -15,7 +14,6 @@ const Login = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        // console.log(email, password)
         signIn(email, password)
             .then(result => {
                 console.log("success", result.user);

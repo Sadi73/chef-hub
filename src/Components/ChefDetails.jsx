@@ -7,7 +7,7 @@ const ChefDetails = () => {
     const { name, picture, experience, number_of_recipes, likes, recipes } = chef;
     // console.log(recipes);
     return (
-        <div>
+        <div className="">
             <div className="flex w-2/5 my-32   bg-white mx-auto  rounded-md border border-2">
                 <img className="w-96" src={picture} alt="" />
                 <div className="flex  items-center">
@@ -33,7 +33,7 @@ const ChefDetails = () => {
                                     recipe.ingredients.map(x => <li key={x}>{x}</li>)
                                    }
                                     <div className="card-actions justify-end">
-                                        <button className="btn btn-primary absolute bottom-0">Buy Now</button>
+                                        <button className="btn btn-primary absolute bottom-0">Favouties</button>
                                     </div>
                                 </div>
                             </div>
