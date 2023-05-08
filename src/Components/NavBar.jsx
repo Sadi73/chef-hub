@@ -1,7 +1,16 @@
 // import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     return (
         <div className='flex justify-center text-center'>
             <div className='p-5 text-white'>
@@ -13,7 +22,10 @@ const NavBar = () => {
                     <Link to='/' className='mr-10 text-xl hover:text-yellow-500'>Home</Link>
                     <Link to='/blog' className='mr-10 text-xl  hover:text-yellow-500'>Blog</Link>
                     <Link to='/register' className='mr-10 text-xl  hover:text-yellow-500'>Register</Link>
-                    <Link to='/login' className=' text-xl  hover:text-yellow-500'>Login</Link>
+                    {
+                        user ? <p>User signed in <button onClick={handleSignOut}>Log Out</button> </p> : <Link to='/login' className=' text-xl  hover:text-yellow-500'>Login</Link>
+                    }
+
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ const Register = () => {
     const handleRegister = (event) => {
         setError('');
         event.preventDefault();
-        const name = event.target.name.value;
+        // const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         const confirm_password = event.target.confirm.value;
