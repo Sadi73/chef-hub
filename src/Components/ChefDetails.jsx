@@ -8,10 +8,10 @@ const ChefDetails = () => {
     // console.log(recipes);
     return (
         <div>
-            <div className="flex w-1/2 mx-auto justify-between rounded-md border border-2">
+            <div className="flex w-2/5  bg-white mx-auto  rounded-md border border-2">
                 <img className="w-96" src={picture} alt="" />
-                <div className="flex justify-center items-center">
-                    <div className="text-3xl text-white">
+                <div className="flex  items-center">
+                    <div className="text-xl ">
                         <h1>{name}</h1>
                         <p>Experience: {experience}</p>
                         <p>Number of Recipes: {number_of_recipes}</p>
