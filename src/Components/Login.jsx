@@ -1,7 +1,19 @@
 // import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext);
+    const handleLogin = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        // console.log(email, password)
+        signIn(email, password)
+            .then(result => console.log("success", result.user))
+            .catch(error => console.log(error));
+    }
     return (
         <div>
             <div className="">
@@ -9,19 +21,19 @@ const Login = () => {
                     <div className="">
                         <h1 className="text-5xl font-bold text-white">Please Login!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="Enter Your Email" className="input input-bordered" />
+                                <input type="text" name='email' placeholder="Enter Your Email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="Enter Password" className="input input-bordered" />
+                                <input type="text" name='password' placeholder="Enter Password" className="input input-bordered" />
                                 <div className='flex justify-between'>
                                     <label className="label">
                                         <Link to='/register' className="label-text-alt link link-hover">New Here? Register</Link>
@@ -35,7 +47,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

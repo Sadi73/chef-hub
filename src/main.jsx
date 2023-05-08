@@ -12,6 +12,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import ChefDetails from './Components/ChefDetails';
+import AuthProviders from './Providers/AuthProviders';
 
 const router = createBrowserRouter([
   {
@@ -36,9 +37,9 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path : "/chef/:chefID",
+        path: "/chef/:chefID",
         element: <ChefDetails></ChefDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.chefID}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.chefID}`)
       }
     ],
   },
@@ -46,6 +47,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProviders>
+      <RouterProvider router={router} />
+    </AuthProviders>
   </React.StrictMode>,
 )
