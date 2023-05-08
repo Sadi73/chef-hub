@@ -1,13 +1,14 @@
 // import React from 'react';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
-    // console.log(user);
+    const [error, setError] = useState(['']);
 
     const handleRegister = (event) => {
+        setError('');
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -22,6 +23,9 @@ const Register = () => {
             event.target.email.value = '';
             event.target.password.value = '';
             event.target.confirm.value = '';
+        }
+        else{
+            setError('Password must be same');
         }
     }
     return (
@@ -58,6 +62,9 @@ const Register = () => {
                                     <Link to='/login' className="label-text-alt link link-hover">Already Have an Account? Please login</Link>
                                 </label>
                             </div>
+                            {
+                                error && <p>{error}</p>
+                            }
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
