@@ -8,7 +8,7 @@ const ChefDetails = () => {
     // console.log(recipes);
     return (
         <div>
-            <div className="flex w-2/5  bg-white mx-auto  rounded-md border border-2">
+            <div className="flex w-2/5 my-32   bg-white mx-auto  rounded-md border border-2">
                 <img className="w-96" src={picture} alt="" />
                 <div className="flex  items-center">
                     <div className="text-xl ">

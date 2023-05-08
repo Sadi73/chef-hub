@@ -8,7 +8,7 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     console.log(location);
-    const from = location.state.from.pathname || '/blog';
+    const from = location.state?.from?.pathname ? location.state.from.pathname : '/';
 
 
     const handleLogin = (event) => {
