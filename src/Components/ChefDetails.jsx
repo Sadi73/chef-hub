@@ -1,16 +1,11 @@
 // import React from 'react';
 
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 
 const ChefDetails = () => {
-    const { chefID } = useParams();
-    const chefs = useLoaderData();
-    // console.log(chefs)
-
-    const chef = chefs.find(c => c._id === chefID);
-    // console.log(chef);
+    const chef = useLoaderData();
     const { name, picture, experience, number_of_recipes, likes, recipes } = chef;
-    console.log(recipes);
+    // console.log(recipes);
     return (
         <div>
             <div className="flex w-1/2 mx-auto justify-between rounded-md border border-2">
